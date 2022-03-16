@@ -5,6 +5,13 @@ Slack App Clone Web
 - https://www.npmjs.com/package/react-chef
 - https://www.npmjs.com/package/@fe-chef/component
 
+## Aproach
+> Web First approach
+
+## Roadmap
+> Desktop
+> Mobile
+
 ## Slack app scope items
 
 - Slack app
@@ -29,11 +36,13 @@ Slack App Clone Web
 
 ![image](https://user-images.githubusercontent.com/3478542/158577906-00e1ad35-f2be-4063-9761-c7ea42f5930b.png)
 
-## Following are the APIs provided
+## Following are the APIs provided 
 
-- GET /organization 
+- GET /organization/<organization_id>
 - POST /channel
 - GET /channel 
+- GET /users 
+- GET /messages/<channel_id>/<organization_id>
 
 ## Out of scope UI components
 
