@@ -47,7 +47,6 @@ Slack App Clone Web
 ## Out of scope UI components
 
 ![image](https://user-images.githubusercontent.com/3478542/158577358-fefc7b34-1ca5-4122-8dda-6916b3b33642.png)
-![image](https://user-images.githubusercontent.com/3478542/158577413-73a19d28-c8ae-4bfc-ba37-57cb2b31d63d.png)
 ![image](https://user-images.githubusercontent.com/3478542/158577544-eedbce05-53aa-436e-9b18-8e9b029c1f5d.png)
 ![image](https://user-images.githubusercontent.com/3478542/158577651-3ebe9f1e-0f53-4188-b85b-b477d038d1d2.png)
 ![image](https://user-images.githubusercontent.com/3478542/158577678-5f950335-e5a6-4c47-bbfa-357393c6f8e0.png)
