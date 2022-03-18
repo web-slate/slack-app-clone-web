@@ -20,8 +20,11 @@ Slack App Clone Web
 
 - Slack app
 
-![image (1)](https://user-images.githubusercontent.com/3478542/158949436-1ccadbee-cbff-4969-82fb-8a069c501aa4.png)
+![image (2)](https://user-images.githubusercontent.com/3478542/158981141-f307baab-d68e-4fc6-97db-2b04867abd98.png)
 
+- Header 
+
+![image](https://user-images.githubusercontent.com/3478542/158979085-e1dcd89d-0131-4426-b25d-3c5d4a04689e.png)
 
 - Create Channel - `Modal window`
 
