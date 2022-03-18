@@ -59,7 +59,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "../public"),
-    publicPath:'/slack-app-clone-web/react',
+    publicPath:'/slack-app-clone-web/react/',
     filename: "slack-clone.js",
     chunkFilename: "[name].js",
   },
