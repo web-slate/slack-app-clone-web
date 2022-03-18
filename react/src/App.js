@@ -15,7 +15,7 @@ function App() {
   return (
       <ErrorHandler>
         <PageLoader />
-        <Router history={browserHistory}>
+        <Router history={browserHistory} basename="/slack-app-clone-web/react">
           <Routes />
         </Router>
       </ErrorHandler>
