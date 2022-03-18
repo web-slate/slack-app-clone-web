@@ -59,6 +59,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "public"),
+    publicPath:'/slack-app-clone-web/react',
     filename: "slack-clone.js",
     chunkFilename: "[name].js",
   },
@@ -89,7 +90,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    open: true,
+    open: ['/slack-app-clone-web/react'],
     historyApiFallback: true,
     static: {
       directory: "./src/static",
