@@ -1,3 +1,6 @@
+<div align="right">
+    <b><a href="https://github.com/web-slate/slack-app-clone-hub/">↥ Back to Slack Hub</a></b>
+</div>
 # Slack-app-clone-web
 Slack App Clone Web
 
@@ -9,14 +12,14 @@ Slack App Clone Web
 > Web First approach
 
 ## Roadmap
-> Desktop
-> Mobile
+- Desktop
+- Mobile
 
 ## Slack app scope items
 
 - Slack app
 
-![image](https://user-images.githubusercontent.com/3478542/158577145-554d3856-b782-45a6-97c8-8aa01fb8c93b.png)
+![image (1)](https://user-images.githubusercontent.com/3478542/158949436-1ccadbee-cbff-4969-82fb-8a069c501aa4.png)
 
 
 - Create Channel - `Modal window`
@@ -34,7 +37,7 @@ Slack App Clone Web
 
 - Organization Area
 
-![image](https://user-images.githubusercontent.com/3478542/158577906-00e1ad35-f2be-4063-9761-c7ea42f5930b.png)
+![image](https://user-images.githubusercontent.com/3478542/158948303-fd7ea9bf-04ec-4cf6-b147-2b4b905ea0b3.png)
 
 ## Following are the APIs provided 
 
@@ -43,6 +46,8 @@ Slack App Clone Web
 - GET /channel 
 - GET /users 
 - GET /messages/<channel_id>/<organization_id>
+
+<b><a href="https://github.com/web-slate/slack-app-clone-api">REST API Repository</a></b>
 
 ## Out of scope UI components
 
