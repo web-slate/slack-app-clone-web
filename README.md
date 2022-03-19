@@ -9,6 +9,8 @@ Slack App Clone Web
 - https://www.npmjs.com/package/react-chef
 - https://www.npmjs.com/package/@fe-chef/component
 
+`npx @fe-chef/component -f react/definitions.txt -l react/src -s css`
+
 ## Aproach
 > Web First approach
 
