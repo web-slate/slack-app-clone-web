@@ -11,6 +11,8 @@ import { useI18n } from '@/i18n'
 // Utils.
 import { RoutePaths } from '@/utils'
 
+import Sidebar from '@/blocks/Sidebar'
+
 // Service Hooks
 import usePost from '@/hooks/usePost'
 
@@ -30,6 +32,7 @@ const SignIn = (props) => {
       <section>
         <div>
           <h1>Login Form</h1>
+          <Sidebar />
           <div>
             {error && 'API is failed'}
             {response && 'Submitted successfully'}
