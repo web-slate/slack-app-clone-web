@@ -1,10 +1,10 @@
 const webpack = require('webpack')
 const path = require('path')
-const PACKAGE = require('./package.json')
 
 // WebPack Plugins.
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const PACKAGE = require('./package.json')
 
 const isProduction =
   process.argv[process.argv.indexOf('--mode') + 1] === 'production'
