@@ -1,14 +1,15 @@
 const webpack = require('webpack')
 const path = require('path')
-const PACKAGE = require('./package.json')
 
 // WebPack Plugins.
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const PACKAGE = require('./package.json')
 
 const isProduction =
   process.argv[process.argv.indexOf('--mode') + 1] === 'production'
 
+<<<<<<< HEAD
   module.exports = {
     entry: "./src/index.js",
     module: {
@@ -44,6 +45,43 @@ const isProduction =
           ],
         },
       ],
+=======
+module.exports = {
+  entry: './src/index.js',
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /.(js)$/,
+        exclude: [/node_modules/],
+        use: ['babel-loader'],
+      },
+      {
+        test: /.svg$/,
+        use: ['@svgr/webpack', 'file-loader'],
+      },
+      {
+        test: /.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
+>>>>>>> 4fa3baefe1d3000a032ca3273c4d74923391fc40
   },
   resolve: {
     extensions: ['*', '.js'],
