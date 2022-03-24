@@ -23,8 +23,8 @@ const RoutesComponent = () => {
   return (
     <Suspense fallback={<PageLoader />}>
       <Routes>
-        <Route path={RoutePaths.Home} exact element={<SignInModule />} />
-        <Route path={RoutePaths.Channel} element={<DashBoardModule />} />
+        <Route path={RoutePaths.SignIn} exact element={<SignInModule />} />
+        <Route path={RoutePaths.DashBoard} element={<DashBoardModule />} />
         <Route path="*" element={<NotFoundModule />} />
       </Routes>
     </Suspense>

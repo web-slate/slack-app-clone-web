@@ -1,5 +1,5 @@
 export default {
-  Home: '/',
-  Channel: '/channel',
+  SignIn: '/',
+  DashBoard: '/dashboard',
   NotFound: '/not-found',
 }
