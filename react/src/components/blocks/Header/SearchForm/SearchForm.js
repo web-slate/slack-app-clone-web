@@ -4,7 +4,17 @@ import styles from './SearchForm.styles.css'
 function SearchForm() {
   return (
     <>
-      <p className={styles.line}>SearchForm goes here.</p>
+      <form action="." className={styles.navSearchBar}>
+          <i class="fas fa-search"></i>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search Slack"
+            className={styles.searchBarInput}
+          />
+        </form>
+
     </>
   )
 }
