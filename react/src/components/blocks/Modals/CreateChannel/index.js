@@ -1,1 +1,1 @@
-export { default } from './CreateChannel'
+export { default as CreateChannel } from './CreateChannel'

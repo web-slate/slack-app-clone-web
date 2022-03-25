@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import styles from './SidebarNav.styles.css'
-
-import { faChevronDown, faCircle, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faCircle, faEdit, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { CreateChannel } from '@/blocks'
+
+import styles from './SidebarNav.styles.css'
 
 const SidebarNav = (props) => {
   const { pages, className, ...rest } = props
 
+  const [showModal, setShowModal] = useState(false)
+
+  const handleModalClose = (bool) => setShowModal(bool)
+  const handleChannelAdd = () => setShowModal(true)
+
   return (
     <article className={styles.sidebarOne}>
-    <section className={styles.sidebarUser}>
+      <section className={styles.sidebarUser}>
         <div className={styles.sidebarUserInfo}>
           <h4>Sriraman Vellingiri</h4>
           <FontAwesomeIcon icon={faChevronDown} />
@@ -18,6 +24,10 @@ const SidebarNav = (props) => {
         <p className={styles.sidebarUserInfoAdditional}>
           <FontAwesomeIcon icon={faCircle} />Slack App
         </p>
+        <div className={styles.sidebarChannel}>
+          <p onClick={handleChannelAdd} >Channels <FontAwesomeIcon icon={faPlus} /></p>
+          <CreateChannel show={showModal} handleModalClose={handleModalClose}/>
+        </div>
         <span className={styles.sidebarUserEditIcon}><FontAwesomeIcon icon={faEdit} /></span>
       </section>
       <section>

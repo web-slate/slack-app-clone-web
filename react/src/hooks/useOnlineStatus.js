@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 function useOnlineStatus() {
   const [online, setOnline] = useState(window.navigator.onLine)
 

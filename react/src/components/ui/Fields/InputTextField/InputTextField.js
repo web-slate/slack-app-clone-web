@@ -7,6 +7,7 @@ export default function InputTextField({
   placeholder,
   handleChange,
   onBlur,
+  ...props
 }) {
   const onChange = (event) => {
     handleChange(event)
@@ -15,6 +16,7 @@ export default function InputTextField({
   return (
     <div>
       <input
+        {...props}
         name={name}
         type="text"
         placeholder={placeholder}
