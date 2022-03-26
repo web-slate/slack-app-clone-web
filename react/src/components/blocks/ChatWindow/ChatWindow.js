@@ -1,10 +1,18 @@
 import React from 'react'
 import styles from './ChatWindow.styles.css'
+import ChatHeader from './ChatHeader'
+import ChatGroupList from './ChatGroupList'
+import MessageForm from './MessageForm'
+
 
 function ChatWindow() {
   return (
     <>
-      <p className={styles.line}>ChatWindow goes here.</p>
+         <section class={styles.content}>
+         <ChatHeader />
+          <ChatGroupList /> 
+          <MessageForm />
+         </section>
     </>
   )
 }

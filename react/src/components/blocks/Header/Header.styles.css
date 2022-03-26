@@ -14,7 +14,7 @@
 .navIcons {
   display: flex;
   align-items: center;
-  margin-left: 13rem;
+  margin-left: 14rem;
 }
 
 .navIconsLink {
@@ -47,5 +47,5 @@
 .navUserImgWrapper {
   width: 1.5rem;
   height: 1.5rem;
-  display: none;
+  margin-left: 0.8rem;
 }

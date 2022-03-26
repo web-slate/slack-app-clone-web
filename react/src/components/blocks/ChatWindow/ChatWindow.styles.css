@@ -1,5 +1,14 @@
 
   /* TODO: Component CSS Style goes here */
-  .line {
-    color: blue;
-  }
+.content {
+  grid-column: 1 / -1;
+  height: 100vh;
+  border-right: 0.1rem solid var(--slack-white);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 10rem;
+  grid-template-areas:
+      "header"
+      "main"
+      "footer";
+}

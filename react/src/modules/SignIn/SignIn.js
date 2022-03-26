@@ -10,6 +10,8 @@ import { useI18n } from '@/i18n'
 // block components
 import { TopBar, Sidebar } from '@/blocks/Region'
 
+import ChatWindow from '@/blocks/ChatWindow'
+ 
 
 import styles from './SignIn.module.css'
 
@@ -23,8 +25,12 @@ const SignIn = (props) => {
       <>
       <div className={styles.container}>
       <TopBar />
-      <Sidebar />
-
+      <main className={styles.contentArea}>
+        <Sidebar />
+        <section class={styles.body}>
+        <ChatWindow />
+        </section>
+      </main>
       </div>
       </>
   )

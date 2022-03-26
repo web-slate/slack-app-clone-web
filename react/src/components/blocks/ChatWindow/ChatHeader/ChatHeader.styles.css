@@ -1,5 +1,15 @@
 
   /* TODO: Component CSS Style goes here */
-  .line {
-    color: blue;
+  .contentHeader {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 0.1rem solid var(--slack-white);
   }
+
+  .contentHeaderDetails {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 0.1rem 1.5rem;
+}
