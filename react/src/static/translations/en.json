@@ -2,5 +2,11 @@
   "app_name": "Google Clone",
   "user_name": "User name",
   "dashboard": "Dashboard",
-  "other_module": "Other module name"
+  "slackcloneapp": "SlackCloneApp",
+  "channels": "Channels",
+  "search_slack": "Search Slack",
+  "create_a_channel" : "create a channel",
+  "plan_budget": "e.g. plan-budget",
+  "name": "Name",
+  "channel_description": "Channels are where your team communicates. They’re best when organized around a topic — #marketing, for example."
 }
