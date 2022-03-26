@@ -22,7 +22,7 @@ const SidebarNav = (props) => {
           <FontAwesomeIcon icon={faChevronDown} />
         </div>
         <div className={styles.sidebarChannel}>
-          <p onClick={handleChannelAdd} >Channels <FontAwesomeIcon icon={faPlus} /></p>
+        <FontAwesomeIcon icon={faChevronDown} /> <span onClick={handleChannelAdd} > Channels <FontAwesomeIcon icon={faPlus} /></span>
           <CreateChannel show={showModal} handleModalClose={handleModalClose}/>
         </div>
         <span className={styles.sidebarUserEditIcon}><FontAwesomeIcon icon={faEdit} /></span>

@@ -9,9 +9,9 @@ function ChatWindow() {
   return (
     <>
          <section class={styles.content}>
-         <ChatHeader />
+         <ChatHeader name="hello"/>
           <ChatGroupList /> 
-          <MessageForm />
+          {/* <MessageForm /> */}
          </section>
     </>
   )
