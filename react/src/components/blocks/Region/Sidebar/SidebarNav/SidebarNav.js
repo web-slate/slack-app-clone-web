@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { faChevronDown, faCircle, faEdit, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown,  faEdit, faMessage, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CreateChannel } from '@/blocks'
 
@@ -18,20 +18,14 @@ const SidebarNav = (props) => {
     <article className={styles.sidebarOne}>
       <section className={styles.sidebarUser}>
         <div className={styles.sidebarUserInfo}>
-          <h4>Sriraman Vellingiri</h4>
+          <h4>SlackCloneApp </h4>
           <FontAwesomeIcon icon={faChevronDown} />
         </div>
-        <p className={styles.sidebarUserInfoAdditional}>
-          <FontAwesomeIcon icon={faCircle} />Slack App
-        </p>
         <div className={styles.sidebarChannel}>
           <p onClick={handleChannelAdd} >Channels <FontAwesomeIcon icon={faPlus} /></p>
           <CreateChannel show={showModal} handleModalClose={handleModalClose}/>
         </div>
         <span className={styles.sidebarUserEditIcon}><FontAwesomeIcon icon={faEdit} /></span>
-      </section>
-      <section>
-      
       </section>
     </article>
   )

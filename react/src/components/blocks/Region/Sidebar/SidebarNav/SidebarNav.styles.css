@@ -15,13 +15,15 @@
 .sidebarUserInfo {
     display: flex;
     align-items: center;
-    margin: 1rem 0 0.1rem 0.5rem;
     font-weight: bold;
 }
 
 .sidebarUserInfo h4{
     font-size: 1rem;
     margin-right: 0.5rem;
+    font-size: 0.8rem;
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
 }
 
 .sidebarUserInfoAdditional{
@@ -33,7 +35,7 @@
     color: var(--slack-white);
 }
 
-.sidebarUserInfoAdditional i {
+.sidebarUserInfoAdditional svg {
     color: var(--slack-green);
     font-size: 0.5rem;
     padding-right: 0.3rem;
@@ -41,8 +43,8 @@
 
 .sidebarUserEditIcon{
     position: absolute;
-    top: 0;
-    right: 1rem;
+    top: 0.4rem;
+    right: 0.8rem;
     width: 2rem;
     height: 2rem;
     border: 0.1rem solid var(--slack-main-white);
@@ -52,3 +54,7 @@
     align-items: center;
     background-color: var(--slack-main-white);
 }
+
+.sidebarUserEditIcon svg {
+    color: var(--slack-other-bckground);
+} 
