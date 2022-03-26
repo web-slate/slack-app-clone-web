@@ -1,7 +1,10 @@
 import React from 'react'
 import styles from './SearchForm.styles.css'
+import { useI18n } from '@/i18n'
 
 function SearchForm() {
+  const { formatMessage } = useI18n()
+  
   return (
     <>
       <form action="." className={styles.navSearchBar}>
@@ -10,7 +13,7 @@ function SearchForm() {
             type="search"
             name="search"
             id="search"
-            placeholder="Search Slack"
+            placeholder={formatMessage({ id: 'search_slack' })}
             className={styles.searchBarInput}
           />
         </form>
