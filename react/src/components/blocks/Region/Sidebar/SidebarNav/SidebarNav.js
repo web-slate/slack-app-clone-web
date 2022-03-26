@@ -22,11 +22,11 @@ const SidebarNav = (props) => {
     <article className={styles.sidebarOne}>
       <section className={styles.sidebarUser}>
         <div className={styles.sidebarUserInfo}>
-          <h4>{formatMessage({ id: 'slackcloneapp' })}  </h4>
+        <h4>{formatMessage({ id: 'slackcloneapp' })}  </h4>
           <FontAwesomeIcon icon={faChevronDown} />
         </div>
         <div className={styles.sidebarChannel}>
-          <p onClick={handleChannelAdd} >{formatMessage({ id: 'channels' })} <FontAwesomeIcon icon={faPlus} /></p>
+        <FontAwesomeIcon icon={faChevronDown} /> <span onClick={handleChannelAdd} > {formatMessage({ id: 'channels' })} <FontAwesomeIcon icon={faPlus} /></span>
           <CreateChannel show={showModal} handleModalClose={handleModalClose}/>
         </div>
         <span className={styles.sidebarUserEditIcon}><FontAwesomeIcon icon={faEdit} /></span>

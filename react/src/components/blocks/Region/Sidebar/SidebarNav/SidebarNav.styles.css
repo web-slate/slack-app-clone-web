@@ -58,3 +58,8 @@
 .sidebarUserEditIcon svg {
     color: var(--slack-other-bckground);
 } 
+
+.sidebarChannel {
+    margin-left: 0.5rem;
+}
+

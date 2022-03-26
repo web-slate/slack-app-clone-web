@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from './Header.styles.css'
 
+import userImg from '../../../static/images/user.png'
+
 function Header() {
   
   return (
@@ -19,7 +21,7 @@ function Header() {
           <div class={styles.navMoveLeft}>
             <a href="#" className={styles.navIconsWhite}><FontAwesomeIcon icon={faCircleQuestion} /> </a>
             <div className={styles.navUserImgWrapper} id="user">
-              <img src="images/user2.jpg" alt="User 1" />
+              <img src={userImg} alt="user1" width="100%" height="100%" />
             </div>
           </div>
         </nav>

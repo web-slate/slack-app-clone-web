@@ -1,5 +1,39 @@
 
   /* TODO: Component CSS Style goes here */
-  .line {
-    color: blue;
-  }
+ .feeds{
+    grid-area: main;
+    overflow: auto;
+    padding: 0.9375rem 0.3125rem 0.625rem 0.3125rem;
+ }
+
+ .feedArticle{
+    display: flex;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+ }
+
+ .feedUserAvatar{
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  position: relative;
+  margin-top: 1.3rem;
+ }
+
+ .feedUserInfo h4 {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  font-weight: bold;
+ }
+
+ .feedUserInfoTS{
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+ }
+
+ .feedText{
+   margin-top: -10%;
+ }
