@@ -27,7 +27,7 @@ const SignIn = (props) => {
       <TopBar />
       <main className={styles.contentArea}>
         <Sidebar />
-        <section class={styles.body}>
+        <section className={styles.body}>
         <ChatWindow />
         </section>
       </main>

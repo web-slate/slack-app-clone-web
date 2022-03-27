@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Accordion.styles.css'
 
-function Accordion() {
+import { faCaretDown, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+function Accordion({ children, title, titleButtons, active = false }) {
+  const [setActive, setActiveState] = useState(active);
+
+  const handleAccordionClick = () => setActiveState(!setActive);
+
   return (
     <>
-      <p className={styles.line}>Accordion goes here.</p>
+      <div className={styles.accordion}>
+        <div onClick={handleAccordionClick} className={styles.accordionTitle}>
+          <FontAwesomeIcon className={styles.accordionIcon} icon={setActive ? faCaretDown: faCaretRight} /> {title}
+        </div>
+        <div className={styles.accordionTitleButtons}>{titleButtons}</div>
+        <div className={setActive ? styles.accordionContentActive : styles.accordionContentHide}>
+          {children}
+        </div>
+      </div>
     </>
   )
 }
