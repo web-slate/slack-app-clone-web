@@ -61,5 +61,32 @@
 
 .sidebarChannel {
     margin-left: 0.5rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+.sidebarChannelList {
+    padding: 0;
+    width: 100%;
+}
+.sidebarChannelList li {
+    padding: 0.3rem 0;
+    margin-bottom: 0.5rem;
 }
 
+.sidebarChannelList li:hover {
+    background-color: #ffffff33;
+}
+
+.sidebarChannelList li:before {
+    content: "#";
+    margin-right: 0.3rem;
+    margin-left: 1rem;
+}
+
+.sidebarNoselect {
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}

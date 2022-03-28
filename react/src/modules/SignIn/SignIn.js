@@ -21,13 +21,12 @@ import { RoutePaths } from '@/utils'
 
 const SignIn = (props) => {
   const { formatMessage } = useI18n()
-  return (
-      <>
+  return (<>
       <div className={styles.container}>
       <TopBar />
       <main className={styles.contentArea}>
         <Sidebar />
-        <section class={styles.body}>
+        <section className={styles.body}>
         <ChatWindow />
         </section>
       </main>

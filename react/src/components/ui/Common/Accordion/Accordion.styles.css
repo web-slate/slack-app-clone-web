@@ -1,5 +1,26 @@
+/* Style the accordion section */
+.accordionIcon{
+  width: 10px;
+}
 
-  /* TODO: Component CSS Style goes here */
-  .line {
-    color: blue;
-  }
+.accordionContentActive {
+  display: block;
+  margin-top: 0.8rem;
+}
+
+.accordionContentHide {
+  display: none;
+}
+
+.accordionTitle {
+  float: left;
+  display: contents;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.accordionTitleButtons {
+  float: right;
+  margin-right: 0.5rem;
+}
