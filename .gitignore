@@ -105,3 +105,6 @@ dist
 
 # React 
 react/node_moduless
+
+public/
+notes.txt
