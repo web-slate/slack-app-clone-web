@@ -21,8 +21,7 @@ import { RoutePaths } from '@/utils'
 
 const SignIn = (props) => {
   const { formatMessage } = useI18n()
-  return (
-      <>
+  return (<>
       <div className={styles.container}>
       <TopBar />
       <main className={styles.contentArea}>

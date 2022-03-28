@@ -12,7 +12,8 @@ import styles from './Sidebar.styles.css'
 const Sidebar = (props) => {
   const { formatMessage } = useI18n()
   return (
-    <section className={styles.sidebarMain}>
+    
+    <section class={styles.sidebarMain}>
       <SidebarNav />
     </section>
   )

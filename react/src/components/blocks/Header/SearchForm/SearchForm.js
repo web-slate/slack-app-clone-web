@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './SearchForm.styles.css'
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useI18n } from '@/i18n'
 
 function SearchForm() {
@@ -8,7 +10,6 @@ function SearchForm() {
   return (
     <>
       <form action="." className={styles.navSearchBar}>
-          <i className="fas fa-search"></i>
           <input
             type="search"
             name="search"
@@ -16,6 +17,7 @@ function SearchForm() {
             placeholder={formatMessage({ id: 'search_slack' })}
             className={styles.searchBarInput}
           />
+          <FontAwesomeIcon icon={faSearch} /> 
         </form>
 
     </>
