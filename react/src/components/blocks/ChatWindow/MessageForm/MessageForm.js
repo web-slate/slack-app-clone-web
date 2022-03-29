@@ -15,7 +15,7 @@ function MessageForm() {
       <div className={styles.feedForm}>
       <Editor
           editorState={editorState}
-          onChange={setEditorState}
+          onEditorStateChange={setEditorState}
           wrapperClassName={styles.WrapperClass}
           editorClassName={styles.EditorClass}
           toolbarClassName={styles.ToolbarClass}
