@@ -32,20 +32,23 @@ const SidebarNav = (props) => {
         <h4>{formatMessage({ id: 'slackcloneapp' })}  </h4>
           <FontAwesomeIcon icon={faChevronDown} />
         </div>
-        <div className={`${styles.sidebarChannel} ${styles.sidebarNoselect}`}>
-          <Accordion
-            title={<span>{formatMessage({ id: 'channels' })} </span>}
-            titleButtons={<FontAwesomeIcon icon={faPlus} onClick={handleChannelAdd} />}>
-            <ul className={styles.sidebarChannelList}>
-              {!loading && !error && channelsList && channelsList.map((channel, index) => {
-                return <li key={ index }>{channel.channel_name}</li>;}
-              )}
-            </ul>
-          </Accordion>
-          <CreateChannel show={showModal} handleModalClose={handleModalClose}/>
-        </div>
         <span className={styles.sidebarUserEditIcon}><FontAwesomeIcon icon={faEdit} /></span>
       </section>
+      
+      <section className="">
+        <div className={`${styles.sidebarChannel} ${styles.sidebarNoselect}`}>
+            <Accordion
+              title={<span>{formatMessage({ id: 'channels' })} </span>}
+              titleButtons={<FontAwesomeIcon icon={faPlus} onClick={handleChannelAdd} />}>
+              <ul className={styles.sidebarChannelList}>
+                {!loading && !error && channelsList && channelsList.map((channel, index) => {
+                  return <li key={ index }>{channel.channel_name}</li>;}
+                )}
+              </ul>
+            </Accordion>
+            <CreateChannel show={showModal} handleModalClose={handleModalClose}/>
+          </div>
+      </section>          
     </article>
   )
 }
