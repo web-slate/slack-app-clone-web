@@ -108,3 +108,5 @@ react/node_moduless
 
 public/
 notes.txt
+.idea/
+.vscode/
