@@ -9,8 +9,7 @@ import styles from './SidebarNav.styles.css'
 // i18n
 import { useI18n } from '@/i18n'
 
-import useFetch from '@/hooks/useFetch'
-import { BASE_API_URL, CHANNEL_API_PATH } from '@/utils'
+import useChannelList from '@/hooks/services/useChannelList'
 
 const SidebarNav = (props) => {
   const { pages, className, ...rest } = props
@@ -21,9 +20,11 @@ const SidebarNav = (props) => {
   const handleModalClose = (bool) => setShowModal(bool)
   const handleChannelAdd = () => setShowModal(true)
 
-  const organization_id = "1ae5241e-a51b-11ec-b909-0242ac120" // hard-coded for now
-
-  const { response: channelsList, error, loading } = useFetch(`${BASE_API_URL}/${CHANNEL_API_PATH}?organization_id=${organization_id}`)
+  const {
+    response: channelListResponse,
+    error: channelListError,
+    loading: channelListLoading
+  } = useChannelList()
 
   return (
     <article className={styles.sidebarOne}>
@@ -37,7 +38,7 @@ const SidebarNav = (props) => {
             title={<span>{formatMessage({ id: 'channels' })} </span>}
             titleButtons={<FontAwesomeIcon icon={faPlus} onClick={handleChannelAdd} />}>
             <ul className={styles.sidebarChannelList}>
-              {!loading && !error && channelsList && channelsList.map((channel, index) => {
+              {!channelListLoading && !channelListError && channelListResponse && channelListResponse.map((channel, index) => {
                 return <li key={ index }>{channel.channel_name}</li>;}
               )}
             </ul>
