@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import styles from './Switch.styles.css'
 
-function Switch() {
+const Switch = forwardRef((props, ref) => {
+  const handleChange = () => {}
   return (
     <>
-      <p className={styles.line}>Switch goes here.</p>
+      <div className={styles.switchConatiner}>
+        <input
+          onChange={handleChange}
+          type="checkbox"
+          className={styles.switch}
+          {...props}
+          ref={ref}
+        />
+        <div className={styles.switchSlider} />
+      </div>
     </>
   )
-}
+});
 
 export default Switch
