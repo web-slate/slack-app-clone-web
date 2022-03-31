@@ -47,7 +47,7 @@
 .sidebarUserEditIcon{
     position: absolute;
     top: 1.2rem;
-    right: 0.8rem;
+    right: 1rem;
     width: 2rem;
     height: 2rem;
     border: 0.1rem solid var(--slack-main-white);
@@ -66,10 +66,13 @@
     margin-left: 0.5rem;
     cursor: pointer;
     margin-left: 0.5rem;
+    color: var(--slack-white);
+    margin-top: 1rem;
 }
 .sidebarChannelList {
     padding: 0;
     width: 100%;
+    margin-left: 1.5rem;
 }
 .sidebarChannelList li {
     padding: 0.3rem 0;
@@ -82,8 +85,8 @@
 
 .sidebarChannelList li:before {
     content: "#";
-    margin-right: 0.3rem;
-    margin-left: 1rem;
+    margin-right: 0.6rem;
+    margin-left: 0.3rem;
 }
 
 .sidebarNoselect {

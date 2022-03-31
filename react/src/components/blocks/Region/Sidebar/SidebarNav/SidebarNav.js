@@ -26,9 +26,16 @@ const SidebarNav = (props) => {
     loading: channelListLoading
   } = useChannelList()
 
+  function MouseOver(event) {
+    event.target.style.background = '#350d36';
+  }
+  function MouseOut(event){
+    event.target.style.background="";
+  }
+
   return (
     <article className={styles.sidebarOne}>
-      <section className={styles.sidebarUser}>
+      <section className={styles.sidebarUser} onMouseOver={MouseOver} onMouseOut={MouseOut}>
         <div className={styles.sidebarUserInfo}>
         <h4>{formatMessage({ id: 'slackcloneapp' })}  </h4>
           <FontAwesomeIcon icon={faChevronDown} />
