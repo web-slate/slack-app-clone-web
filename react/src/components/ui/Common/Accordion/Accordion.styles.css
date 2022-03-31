@@ -1,6 +1,8 @@
 /* Style the accordion section */
 .accordionIcon{
   width: 10px;
+  margin-left: 1rem;
+  height: 1.3rem;
 }
 
 .accordionContentActive {
@@ -20,7 +22,14 @@
   white-space: nowrap;
 }
 
+.accordionTitle  span{
+  font-size: 1.2rem;
+  padding-left: 0.8rem;
+}
+
 .accordionTitleButtons {
   float: right;
-  margin-right: 0.5rem;
+  margin-right: 2rem;
+  height: 1.2rem;
+  margin-top: 0.3rem;
 }

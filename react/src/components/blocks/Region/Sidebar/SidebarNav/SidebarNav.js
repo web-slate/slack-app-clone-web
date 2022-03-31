@@ -26,13 +26,24 @@ const SidebarNav = (props) => {
     loading: channelListLoading
   } = useChannelList()
 
+  function MouseOver(event) {
+    event.target.style.background = '#350d36';
+  }
+  function MouseOut(event){
+    event.target.style.background="";
+  }
+
   return (
     <article className={styles.sidebarOne}>
-      <section className={styles.sidebarUser}>
+      <section className={styles.sidebarUser} onMouseOver={MouseOver} onMouseOut={MouseOut}>
         <div className={styles.sidebarUserInfo}>
         <h4>{formatMessage({ id: 'slackcloneapp' })}  </h4>
           <FontAwesomeIcon icon={faChevronDown} />
         </div>
+        <span className={styles.sidebarUserEditIcon}><FontAwesomeIcon icon={faEdit} /></span>
+      </section>
+      
+      <section className="">
         <div className={`${styles.sidebarChannel} ${styles.sidebarNoselect}`}>
           <Accordion
             title={<span>{formatMessage({ id: 'channels' })} </span>}
@@ -45,8 +56,7 @@ const SidebarNav = (props) => {
           </Accordion>
           <CreateChannel show={showModal} handleModalClose={handleModalClose}/>
         </div>
-        <span className={styles.sidebarUserEditIcon}><FontAwesomeIcon icon={faEdit} /></span>
-      </section>
+      </section>          
     </article>
   )
 }
