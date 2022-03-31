@@ -27,10 +27,10 @@ const SidebarNav = (props) => {
   } = useChannelList()
 
   function MouseOver(event) {
-    event.target.style.background = '#350d36';
+    event.target.style.background = '#350d36'
   }
   function MouseOut(event){
-    event.target.style.background="";
+    event.target.style.background = ""
   }
 
   return (

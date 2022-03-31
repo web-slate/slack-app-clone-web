@@ -1,29 +1,22 @@
-import React from 'react'
+import React, { useState, forwardRef } from 'react'
 
-export default function InputTextField({
-  name,
-  initialValue = '',
-  value,
-  placeholder,
-  handleChange,
-  onBlur,
-  ...props
-}) {
-  const onChange = (event) => {
-    handleChange(event)
-  }
+const noop = () => {}
 
+const InputTextField = forwardRef(({ name, initialValue='', placeholder, handleChange, onChange=noop, onBlur=noop, ...props }, ref) => {
   return (
     <div>
       <input
-        {...props}
         name={name}
         type="text"
         placeholder={placeholder}
-        value={value || initialValue}
+        defaultValue={initialValue}
         onChange={onChange}
         onBlur={onBlur}
+        ref={ref}
+        {...props}
       />
     </div>
   )
-}
+});
+
+export default InputTextField;

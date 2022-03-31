@@ -1,5 +1,47 @@
-
-  /* TODO: Component CSS Style goes here */
-  .line {
-    color: blue;
-  }
+.switchConatiner {
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.switch {
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+.switch:checked ~ .switchSlider {
+  background: #7befb2;
+}
+.switch:checked ~ .switchSlider:after {
+  transform: translate(40px, 0);
+}
+.switch,
+.switchSlider {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
+.switchSlider {
+  background: #ececec;
+  transition: background 0.25s ease;
+}
+.switchSlider:after {
+  height: 30px;
+  width: 30px;
+  background: #fff;
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  top: 5px;
+  left: 5px;
+  transition: transform 0.25s ease;
+}
