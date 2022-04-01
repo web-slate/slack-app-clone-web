@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { faChevronDown,  faEdit, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CreateChannel } from '@/blocks'
-import { Accordion } from '@/ui'
+import { Accordion, BlockLoader } from '@/ui'
 
 import styles from './SidebarNav.styles.css'
 // i18n
@@ -42,7 +42,7 @@ const SidebarNav = (props) => {
         </div>
         <span className={styles.sidebarUserEditIcon}><FontAwesomeIcon icon={faEdit} /></span>
       </section>
-      
+
       <section className="">
         <div className={`${styles.sidebarChannel} ${styles.sidebarNoselect}`}>
           <Accordion
@@ -56,7 +56,9 @@ const SidebarNav = (props) => {
           </Accordion>
           <CreateChannel show={showModal} handleModalClose={handleModalClose}/>
         </div>
-      </section>          
+      </section>
+
+      <BlockLoader loading={channelListLoading}/>
     </article>
   )
 }
