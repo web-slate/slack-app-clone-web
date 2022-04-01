@@ -1,4 +1,5 @@
 export { Spinner, BlockLoader } from './Loader'
-export { InputTextField } from './Fields'
+export { InputTextField, Switch } from './Fields'
 export { Modal } from './Common/Modal'
 export { Accordion } from './Common/Accordion'
+export { SubmitButton } from './Buttons/SubmitButton'

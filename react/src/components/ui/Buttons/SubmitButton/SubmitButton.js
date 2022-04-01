@@ -1,10 +1,17 @@
 import React from 'react'
 import styles from './SubmitButton.styles.css'
 
-function SubmitButton() {
+function SubmitButton( { children, handleOnclick }) {
+
   return (
     <>
-      <p className={styles.line}>SubmitButton goes here.</p>
+      <button
+        type='submit'
+        onClick={handleOnclick}
+        className={styles.submitButton}
+      >
+      {children}
+      </button>
     </>
   )
 }
