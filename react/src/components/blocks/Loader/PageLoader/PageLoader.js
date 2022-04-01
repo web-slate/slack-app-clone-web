@@ -1,9 +1,14 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { createPortal } from 'react-dom'
 
-// UI Components.
+import styles from './PageLoader.styles.css'
 import { Spinner } from '@/ui'
 
 export default function PageLoader({ loading }) {
-  // Add your business logic with store condition.
-  return <Fragment>{loading && <Spinner />}</Fragment>
+  return loading ? createPortal (
+    <>
+      <div className={styles.pageLoader}><Spinner /></div>
+    </>,
+    document.body
+  ) : null
 }
