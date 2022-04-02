@@ -3,7 +3,7 @@ import { Modal, InputTextField, Switch, SubmitButton } from '@/ui'
 import { useI18n } from '@/i18n'
 import { useForm } from 'react-hook-form';
 import useCreateChannel from '@/hooks/services/useCreateChannel'
-
+import { PageLoader } from '@/blocks'
 import styles from './CreateChannel.styles.css'
 
 function CreateChannel({ show, handleModalClose }) {
@@ -24,10 +24,10 @@ function CreateChannel({ show, handleModalClose }) {
     'sendPostData'
   )
 
-  const handleCreateChannelFormSubmit = (data) => {
-    createChannelPostedData(data)
-    reset()
+  const handleCreateChannelFormSubmit = async (data) => {
+    await createChannelPostedData(data)
     alert('Submitted Successfully')
+    reset()
     handleModalClose(false)
   }
 
@@ -60,6 +60,7 @@ function CreateChannel({ show, handleModalClose }) {
           </form>
         </div>
       </Modal>
+      <PageLoader loading={createChannelLoading}/>
     </>
   )
 }
