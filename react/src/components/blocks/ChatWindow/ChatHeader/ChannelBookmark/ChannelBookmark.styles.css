@@ -1,0 +1,24 @@
+.contentBookmarkDetails {
+    display: flex;
+    flex-direction: row;
+    color: rgba(var(--sk_foreground_max_solid,97,96,97),1)
+  }
+  
+  .contentBookmark {
+    grid-area: bookmark;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 0.1rem solid var(--slack-white);
+  }
+  
+  .contentBookmarkText {
+    margin-top: 0.7rem;
+    margin-left: 0.5rem;
+  }
+
+  .bookmarkAdd {
+    margin-top: 0.7rem;
+    margin-left: 1.5rem;
+  }
+  
+  

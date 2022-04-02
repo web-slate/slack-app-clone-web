@@ -3,14 +3,26 @@
  .feeds{
     grid-area: main;
     overflow: auto;
-    padding: 0.9375rem 0.3125rem 0.625rem 0.3125rem;
+    padding: 0.9375rem 0rem 0.625rem 0.3125rem;
  }
 
  .feedArticle{
     display: flex;
-    padding: 0.5rem;
-    margin-left: 1rem;
-    margin-right: 2rem;
+    padding-left: 1.5rem;
+ }
+
+ .feeds fieldset{
+   border-top: 1px solid var(--slack-white);
+   border-bottom: 0;
+   border-right: 0;
+   border-left: 0;
+ }
+
+ .feeds legend{
+   padding: 0.2rem 1.4rem;
+   border: 1px solid var(--slack-white);
+   border-radius: 10px;
+   text-align: center;
  }
 
  .feedUserAvatar{

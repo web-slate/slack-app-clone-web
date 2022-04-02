@@ -1,25 +1,30 @@
 
-  /* TODO: Component CSS Style goes here */
   .contentHeader {
     grid-area: header;
-    display: flex;
     align-items: center;
     background-color: #fff;
     border-bottom: 0.1rem solid var(--slack-white);
   }
 
+  
+  .contentBookmark {
+    grid-area: bookmark;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 0.1rem solid var(--slack-white);
+  }
+
+
 .contentHeaderDetails {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .contentHeaderName{
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
 }
 
-.contentHeaderName a{
-  text-decoration: none;
-}

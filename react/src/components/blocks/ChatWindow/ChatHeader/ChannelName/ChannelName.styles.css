@@ -1,5 +1,15 @@
+.contentChannelName{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
 
-  /* TODO: Component CSS Style goes here */
-  .line {
-    color: blue;
-  }
+.contentHeaderName a{
+  text-decoration: none;
+}
+
+.contentHeaderName svg{
+  height: 0.6rem;
+}

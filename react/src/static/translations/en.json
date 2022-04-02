@@ -13,5 +13,6 @@
   "make_private": "Make private",
   "make_private_description": "When a channel is set to private, it can only be viewed or joined by invitation.",
   "channel_description": "Channels are where your team communicates. They’re best when organized around a topic — #marketing, for example.",
-  "channel_name_error": "Channel name is required and maxlength is 80"
+  "channel_name_error": "Channel name is required and maxlength is 80",
+  "add_a_bookmark": "Add a Bookmark"
 }

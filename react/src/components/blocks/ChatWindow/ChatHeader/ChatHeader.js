@@ -1,20 +1,20 @@
 import React from 'react'
 import styles from './ChatHeader.styles.css'
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ChannelName from './ChannelName'
+import ChannelMembers from './ChannelMembers'
+import ChannelBookmark from './ChannelBookmark'
 
 function ChatHeader(props) {
 
-  const { name } = props
   return (
     <>
       <section className={styles.contentHeader}>
         <article className={styles.contentHeaderDetails}>
-            <h4 className={styles.contentHeaderName}>
-              <a href='#'> #{name} <FontAwesomeIcon icon={faChevronDown} /> </a>
-            </h4>
+          <ChannelName {...props} />
+          <ChannelMembers />
         </article>
       </section>
+      <ChannelBookmark />
     </>
   )
 }

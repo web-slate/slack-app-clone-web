@@ -1,5 +1,21 @@
-
-  /* TODO: Component CSS Style goes here */
-  .line {
-    color: blue;
+  .channelMembers {
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0.2rem;
+    border-radius: 6px;
+    border: 1px solid var(--slack-white);
+    margin-top: 1rem;
+    margin-right: 2rem;
+    align-items: center;
   }
+
+  .memberImg {
+    border-radius: 10%;
+  }
+
+  .memberCount {
+    margin: 0.6rem;
+  }
+
+
