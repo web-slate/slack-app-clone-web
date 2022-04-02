@@ -13,7 +13,7 @@ function ChatGroupList() {
           </section>
           <section class={styles.feedContent}>
             <section class={styles.feedUserInfo}>
-              <h4>Sriraman Vellingiri <span class={styles.feedUserInfoTS}>9:56am</span></h4>
+              <h4> Jacob  <span class={styles.feedUserInfoTS}>9:56am</span></h4>
             </section>
             
               <p class={styles.feedText}>

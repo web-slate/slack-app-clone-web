@@ -4,14 +4,17 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
+
 function ChannelName(props) {
   const { name } = props 
   return (
-    <div class={styles.contentChannelName}>
-    <h4 className={styles.contentHeaderName}>
-      <a href='#'> #{name} <FontAwesomeIcon icon={faChevronDown} /> </a>
-    </h4>
-  </div>
+    <>
+    <div className={styles.contentChannelName}>
+      <h4 className={styles.contentHeaderName}>
+        <a href='#'> #{name} <FontAwesomeIcon icon={faChevronDown} /> </a>
+      </h4>
+    </div>
+    </>
   )
 }
 
