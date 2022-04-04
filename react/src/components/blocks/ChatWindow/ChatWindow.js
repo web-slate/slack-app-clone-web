@@ -11,7 +11,7 @@ function ChatWindow() {
          <section class={styles.content}>
          <ChatHeader name="hello"/>
           <ChatGroupList /> 
-          <MessageForm />
+          <MessageForm channelName="hello"/>
          </section>
     </>
   )
