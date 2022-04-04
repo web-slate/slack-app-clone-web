@@ -3,11 +3,12 @@
 
   .feedForm {
     grid-area: footer;
-    height: 80%;
+    height: 10%;
     position: relative;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    margin-top: -2rem;
   }
 
   .appHeader {
@@ -28,17 +29,27 @@
   }
 
   .WrapperClass {
-    padding: 1rem;
     border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 0.2rem 0.88rem;
   }
 
   .EditorClass {
-    background-color:lightgray;
     padding: 1rem;
-    border: 1px solid #ccc;
+    border-radius: 0px 0px 10px 10px;
   }
 
   .ToolbarClass{
-    border: 1px solid #ccc;
+    background-color: rgba(var(--sk_foreground_min_solid,248,248,248),1);
+    border-radius: 10px 10px 0px 0px;
   }
 
+  .footerToolBar {
+    position: absolute;
+    top: 99px;
+    right: 7%;
+  }
+
+  .footerToolBar button{
+    border:0
+  }
