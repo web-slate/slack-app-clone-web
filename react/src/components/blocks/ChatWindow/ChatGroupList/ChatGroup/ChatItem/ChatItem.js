@@ -13,7 +13,7 @@ function ChatItem({ from, message, datetime }) {
           <h4>
             {from.username}
             <span class={styles.feedUserInfoTS}>
-              {new Date(datetime).toLocaleTimeString()}
+              {new Date(Number(datetime)).toLocaleTimeString()}
             </span>
           </h4>
         </section>
