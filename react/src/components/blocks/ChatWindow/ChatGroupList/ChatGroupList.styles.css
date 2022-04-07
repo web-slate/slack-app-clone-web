@@ -1,14 +1,8 @@
 
-  /* TODO: Component CSS Style goes here */
  .feeds{
     grid-area: main;
     overflow: auto;
     padding: 0.9375rem 0rem 0.625rem 0.3125rem;
- }
-
- .feedArticle{
-    display: flex;
-    padding-left: 1.5rem;
  }
 
  .feeds fieldset{
@@ -23,29 +17,4 @@
    border: 1px solid var(--slack-white);
    border-radius: 10px;
    text-align: center;
- }
-
- .feedUserAvatar{
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-right: 0.5rem;
-  flex-shrink: 0;
-  position: relative;
-  margin-top: 1.3rem;
- }
-
- .feedUserInfo h4 {
-  font-size: 1rem;
-  margin-right: 0.5rem;
-  font-weight: bold;
- }
-
- .feedUserInfoTS{
-  font-size: 0.6rem;
-  font-weight: 400;
-  text-transform: uppercase;
- }
-
- .feedText{
-   margin-top: -10%;
  }

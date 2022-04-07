@@ -7,12 +7,8 @@ import { PageLoader } from '@/blocks'
 // Utils.
 import { RoutePaths } from '@/utils'
 
-const SignInModule = React.lazy(() =>
-  import(/* webpackChunkName: "modules/SignIn" */ './modules/SignIn')
-)
-
-const DashBoardModule = React.lazy(() =>
-  import(/* webpackChunkName: "modules/Dashboard" */ './modules/Dashboard')
+const ApplicationModule = React.lazy(() =>
+  import(/* webpackChunkName: "modules/Application" */ './modules/Application')
 )
 
 const NotFoundModule = React.lazy(() =>
@@ -23,8 +19,7 @@ const RoutesComponent = () => {
   return (
     <Suspense fallback={<PageLoader />}>
       <Routes>
-        <Route path={RoutePaths.Home} exact element={<SignInModule />} />
-        <Route path={RoutePaths.Channel} element={<DashBoardModule />} />
+        <Route path={RoutePaths.Home} exact element={<ApplicationModule />} />
         <Route path="*" element={<NotFoundModule />} />
       </Routes>
     </Suspense>
