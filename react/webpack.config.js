@@ -8,45 +8,43 @@ const PACKAGE = require('./package.json')
 
 const isProduction =
   process.argv[process.argv.indexOf('--mode') + 1] === 'production'
-  
-  module.exports = {
-    entry: "./src/index.js",
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          use: [
-            "style-loader",
-            {
-              loader: "css-loader",
-              options: {
-                importLoaders: 1,
-                modules: true,
-              },
+
+module.exports = {
+  entry: './src/index.js',
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true,
             },
-          ],
-          exclude: [
-            path.resolve(__dirname, "src/css/react-draft-wysiwyg.css"),
-          ]
-        },
-        {
-          test: /.(js)$/,
-          exclude: [/node_modules/],
-          use: ["babel-loader"],
-        },
-        {
-          test: /.svg$/,
-          use: ["@svgr/webpack", "file-loader"],
-        },
-        {
-          test: /.(png|jpe?g|gif)$/i,
-          use: [
-            {
-              loader: "file-loader",
-            },
-          ],
-        },
-      ],
+          },
+        ],
+        exclude: [path.resolve(__dirname, 'src/css/react-draft-wysiwyg.css')],
+      },
+      {
+        test: /.(js)$/,
+        exclude: [/node_modules/],
+        use: ['babel-loader'],
+      },
+      {
+        test: /.svg$/,
+        use: ['@svgr/webpack', 'file-loader'],
+      },
+      {
+        test: /.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
   },
   resolve: {
     extensions: ['*', '.js'],
@@ -101,6 +99,8 @@ const isProduction =
     port: 3000,
     proxy: {
       '/api': 'http://YOUR_API_URL:9000',
+      '/slack-app-clone-web/react/translations/en.json':
+        '/translations/en.json',
     },
   },
 }
