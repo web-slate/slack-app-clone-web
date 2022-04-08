@@ -1,6 +1,10 @@
 import React from 'react'
 import styles from './SubmitButton.styles.css'
 
+// i18n
+import { useI18n } from '@/i18n'
+
+
 import sendImg from '../../../../../static/images/send.svg'
 import plusImg from '../../../../../static/images/plus.svg'
 import videoImg from '../../../../../static/images/video.svg'
@@ -11,16 +15,53 @@ import fontImg from '../../../../../static/images/aafont.svg'
 
 
 function SubmitButton() {
+  
+  const { formatMessage } = useI18n()
+
+  const getToolBarButtonImages = [
+    {
+       sourceImage: plusImg,
+       alternativeTextLocaleKey: 'plus',
+       styledClassName: 'footerToolbarImg'
+    },
+    {
+      sourceImage: videoImg,
+      alternativeTextLocaleKey: 'video',
+      styledClassName: 'footerToolbarImg'
+    },
+    {
+      sourceImage: micImg,
+      alternativeTextLocaleKey: 'mic',
+      styledClassName: 'footerToolbarImg'
+    },
+    {
+      sourceImage: smileyImg,
+      alternativeTextLocaleKey: 'emoji',
+      styledClassName: 'footerToolbarImg'
+    },
+    {
+      sourceImage: atImg,
+      alternativeTextLocaleKey: 'at',
+      styledClassName: 'footerToolbarImg'
+    },
+    {
+      sourceImage: fontImg,
+      alternativeTextLocaleKey: 'font',
+      styledClassName: 'footerToolbarImg'
+    },
+    {
+      sourceImage: sendImg,
+      alternativeTextLocaleKey: 'send',
+      styledClassName: 'sendImg'
+    }
+  ]
+
   return (
     <>
       <div class={styles.footerToolBar}>
-      <img src={plusImg} alt="send" className={styles.footerToolbarImg} />
-      <img src={videoImg} alt="video" className={styles.footerToolbarImg} />
-      <img src={micImg} alt="mic" className={styles.footerToolbarImg}/>
-      <img src={smileyImg} alt="smiley" className={styles.footerToolbarImg}/>
-      <img src={atImg} alt="at" className={styles.footerToolbarImg} />
-      <img src={fontImg} alt="font" className={styles.footerToolbarImg}/>
-      <img src={sendImg} alt="send"  className={styles.sendImg}/>
+          {getToolBarButtonImages.map(({ sourceImage, alternativeTextLocaleKey, styledClassName }) => {
+            return <img src={sourceImage} alt={formatMessage({ id: alternativeTextLocaleKey })} className={styles[styledClassName]} />
+          })}
       </div>
     </>
   )

@@ -15,5 +15,11 @@
   "channel_description": "Channels are where your team communicates. They’re best when organized around a topic — #marketing, for example.",
   "channel_name_error": "Channel name is required and maxlength is 80",
   "add_a_bookmark": "Add a Bookmark",
-  "send_a_message_to_#": "Send a message to #"
+  "send_a_message_to_#": "Send a message to #",
+  "video": "video",
+  "mic": "mic",
+  "emoji": "emoji",
+  "at": "at",
+  "font": "font",
+  "send": "send"
 }
