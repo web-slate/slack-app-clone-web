@@ -19,16 +19,18 @@ import styles from './Application.module.css'
 // FIXME: This values should be dynamic
 const ORGANIZATION_ID = '1ae5241e-a51b-11ec-b909-0242ac120002'
 const CHANNEL_ID = '4f0300c2-a51b-11ec-b909-0242ac120002'
+const CHANNEL_NAME = 'hello'
 
 const Application = () => {
-
   //TODO: Update organizationId and channelId based on selection
   const [organizationId, setOrganizationId] = useState(ORGANIZATION_ID)
   const [channelId, setChannelId] = useState(CHANNEL_ID)
+  const [channelName, setChannelName] = useState(CHANNEL_NAME)
 
   const applicationContext = {
     organizationId,
     channelId,
+    channelName,
   }
 
   return (
