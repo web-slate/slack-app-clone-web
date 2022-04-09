@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import styles from './MessageForm.styles.css'
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SubmitButton from  './SubmitButton'
+
 // i18n
 import { useI18n } from '@/i18n'
 
@@ -41,11 +41,7 @@ function MessageForm(props) {
           }}
         
         />
-        <div class={styles.footerToolBar}>
-        <button type="submit" class="btn-borderless button">
-            <FontAwesomeIcon icon={faAngleRight} />      
-        </button>
-        </div>
+        <SubmitButton />
       </div>
      
     </>
