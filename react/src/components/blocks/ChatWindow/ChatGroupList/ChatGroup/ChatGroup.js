@@ -1,10 +1,12 @@
 import React from 'react'
-import styles from './ChatGroup.styles.css'
+import ChatItem from './ChatItem/ChatItem'
 
-function ChatGroup() {
+function ChatGroup({ messages }) {
   return (
     <>
-      <p className={styles.line}>ChatGroup goes here.</p>
+      {messages.map((message) => {
+        return <ChatItem key={message.datetime} {...message} />
+      })}
     </>
   )
 }

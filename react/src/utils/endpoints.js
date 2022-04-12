@@ -9,7 +9,7 @@ export const USERS_LIST = `${getBasePath()}/users`
 
 export const CHANNEL_LIST = `${getBasePath()}/channel`
 
-export const MESSAGES_LIST = `${getBasePath()}/messages/${CHANNEL_ID}/${ORGANIZATION_ID}`
+export const MESSAGES_LIST = `${getBasePath()}/messages`
 
 export const ORGANIZATION_BY_ID = `${getBasePath()}/organization/${ORGANIZATION_ID}`
 
