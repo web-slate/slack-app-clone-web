@@ -21,5 +21,7 @@
   "emoji": "emoji",
   "at": "at",
   "font": "font",
-  "send": "send"
+  "send": "send",
+  "create_sidebar_section": "Create Sidebar Section",
+  "browse_channels": "Browse Channels"
 }

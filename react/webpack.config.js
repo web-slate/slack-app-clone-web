@@ -25,7 +25,6 @@ module.exports = {
             },
           },
         ],
-        exclude: [path.resolve(__dirname, 'src/css/react-draft-wysiwyg.css')],
       },
       {
         test: /.(js)$/,
