@@ -6,4 +6,9 @@
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  font-weight: bolder;
+}
+
+.submitButton:hover {
+  background-color: #7befb2;
 }

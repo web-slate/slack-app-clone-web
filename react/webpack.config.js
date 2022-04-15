@@ -54,6 +54,7 @@ module.exports = {
       '@/blocks': path.resolve(__dirname, 'src', 'components', 'blocks'),
       '@/hooks': path.resolve(__dirname, 'src', 'hooks'),
       '@/utils': path.resolve(__dirname, 'src', 'utils'),
+      '@/context': path.resolve(__dirname, 'src', 'context'),
     },
   },
   output: {
