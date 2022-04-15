@@ -4,12 +4,15 @@ import { faChevronDown,  faEdit, faPlus } from "@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CreateChannel } from '@/blocks'
 import { Accordion, BlockLoader } from '@/ui'
+import {ContextMenu, MenuItem, ContextMenuTrigger} from "react-contextmenu";
+
 
 import styles from './SidebarNav.styles.css'
 // i18n
 import { useI18n } from '@/i18n'
 
 import useChannelList from '@/hooks/services/useChannelList'
+
 
 const SidebarNav = (props) => {
   const { pages, className, ...rest } = props
@@ -35,6 +38,11 @@ const SidebarNav = (props) => {
   }
 
 
+  const handleClick = (e, data) => {
+    console.log(`Clicked on menu ${data.item}`);
+  };
+    
+
   return (
     <article className={styles.sidebarOne}>
       <section className={styles.sidebarUser} onMouseOver={MouseOver} onMouseOut={MouseOut}>
@@ -46,6 +54,7 @@ const SidebarNav = (props) => {
       </section>
 
       <section className="">
+      <ContextMenuTrigger id="select_options">
         <div className={`${styles.sidebarChannel} ${styles.sidebarNoselect}`}>
           <Accordion
             title={<span>{formatMessage({ id: 'channels' })} </span>}
@@ -58,6 +67,20 @@ const SidebarNav = (props) => {
           </Accordion>
           <CreateChannel show={showModal} handleModalClose={handleModalClose}/>
         </div>
+      </ContextMenuTrigger>
+
+      <ContextMenu className={styles.menu} id="select_options">
+          <MenuItem onClick={handleClick} data={{item: ""}}
+          className={`${styles.menuItem} ${styles.menuItemFirst}`}>
+              {formatMessage({ id: 'create_sidebar_section' })}
+          </MenuItem>
+          <MenuItem onClick={handleClick} data={{item: ""}} className={styles.menuItem}>
+                {formatMessage({ id: 'browse_channels' })}
+          </MenuItem>
+          <MenuItem onClick={handleChannelAdd} data={{item: "Create a Channel"}} className={styles.menuItem}>
+              {formatMessage({ id: 'create_a_channel' })}
+          </MenuItem>
+        </ContextMenu>
       </section>
 
       <BlockLoader loading={channelListLoading}/>
