@@ -5,13 +5,12 @@ import ChannelMembers from './ChannelMembers'
 import ChannelBookmark from './ChannelBookmark'
 
 function ChatHeader(props) {
-
   return (
     <>
       <section className={styles.contentHeader}>
         <article className={styles.contentHeaderDetails}>
           <ChannelName {...props} />
-          <ChannelMembers />
+          <ChannelMembers members={props.data.members} />
         </article>
       </section>
       <ChannelBookmark />

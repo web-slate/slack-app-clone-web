@@ -22,10 +22,14 @@ function CreateChannel({ show, handleModalClose }) {
   const handleCreateChannelFormSubmit = async (data) => {
     data.organization_id = organizationId
     data.members = []
-    await createChannelPostedData(data)
-    alert('Submitted Successfully')
+    const result = await createChannelPostedData(data)
+    if (result.response) {
+      alert(result.response?.message)
+      handleModalClose(false)
+    } else if (result.error) {
+      alert(result.error?.response?.data?.message)
+    }
     reset()
-    handleModalClose(false)
   }
 
   return (

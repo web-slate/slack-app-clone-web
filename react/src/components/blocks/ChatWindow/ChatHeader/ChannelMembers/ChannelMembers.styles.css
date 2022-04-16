@@ -1,21 +1,20 @@
-  .channelMembers {
-    height: 2rem;
-    display: flex;
-    flex-direction: row;
-    padding: 0.2rem;
-    border-radius: 6px;
-    border: 1px solid var(--slack-white);
-    margin-top: 1rem;
-    margin-right: 2rem;
-    align-items: center;
-  }
+.channelMembers {
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0.2rem;
+  border-radius: 6px;
+  border: 1px solid var(--slack-white);
+  margin-top: 1rem;
+  margin-right: 2rem;
+  align-items: center;
+}
 
-  .memberImg {
-    border-radius: 10%;
-  }
+.memberImg {
+  border-radius: 10%;
+  margin-right: 0.1rem;
+}
 
-  .memberCount {
-    margin: 0.6rem;
-  }
-
-
+.memberCount {
+  margin: 0.6rem;
+}

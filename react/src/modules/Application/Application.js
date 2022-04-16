@@ -1,11 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-
-// UI Components.
-import { InputTextField } from '@/ui'
-
-// Custom Hooks.
-import { useI18n } from '@/i18n'
 
 // block components
 import { TopBar, Sidebar } from '@/blocks/Region'
@@ -16,35 +9,70 @@ import ApplicationContext from '@/context/Application'
 
 import styles from './Application.module.css'
 
-// FIXME: This values should be dynamic
-const ORGANIZATION_ID = '1ae5241e-a51b-11ec-b909-0242ac120002'
-const CHANNEL_ID = '4f0300c2-a51b-11ec-b909-0242ac120002'
-const CHANNEL_NAME = 'hello'
+import useOrganizationById from '@/hooks/services/useOrganizationById'
+import { PageLoader } from '@/blocks'
+import { storageAPI } from '@/utils'
 
 const Application = () => {
-  //TODO: Update organizationId and channelId based on selection
-  const [organizationId, setOrganizationId] = useState(ORGANIZATION_ID)
-  const [channelId, setChannelId] = useState(CHANNEL_ID)
-  const [channelName, setChannelName] = useState(CHANNEL_NAME)
+  const storage = storageAPI()
+  const channel = JSON.parse(storage.getItem('channel') || '{}')
+
+  const [organizationId, setOrganizationId] = useState('')
+  const [organizationName, setOrganizationName] = useState('')
+  const [channelId, setChannelId] = useState(channel.channel_id || '')
+  const [channelName, setChannelName] = useState(channel.channel_name || '')
+  const [channelData, setChannelData] = useState(channel || {})
+
+  const {
+    response: organizationResponse,
+    error: organizationError,
+    loading: organizationLoading,
+  } = useOrganizationById()
+
+  if (organizationLoading) return <PageLoader organizationLoading />
+  if (organizationError) return organizationError.message
+
+  if (organizationResponse) {
+    if (organizationId !== organizationResponse.organization_id) {
+      setOrganizationId(organizationResponse.organization_id)
+    }
+    if (organizationName !== organizationResponse.organization_name) {
+      setOrganizationName(organizationResponse.organization_name)
+    }
+  }
+
+  const setChannel = (channel) => {
+    if (channel && channel.channel_id) {
+      setChannelName(channel.channel_name)
+      setChannelId(channel.channel_id)
+      setChannelData(channel)
+      storage.setItem('channel', JSON.stringify(channel))
+    }
+  }
 
   const applicationContext = {
     organizationId,
+    organizationName,
     channelId,
     channelName,
+    channelData,
+    setChannel,
   }
 
   return (
-    <ApplicationContext.Provider value={applicationContext}>
-      <div className={styles.container}>
-        <TopBar />
-        <main className={styles.contentArea}>
-          <Sidebar />
-          <section className={styles.body}>
-            <ChatWindow />
-          </section>
-        </main>
-      </div>
-    </ApplicationContext.Provider>
+    organizationName && (
+      <ApplicationContext.Provider value={applicationContext}>
+        <div className={styles.container}>
+          <TopBar />
+          <main className={styles.contentArea}>
+            <Sidebar />
+            <section className={styles.body}>
+              <ChatWindow />
+            </section>
+          </main>
+        </div>
+      </ApplicationContext.Provider>
+    )
   )
 }
 

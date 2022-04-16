@@ -12,18 +12,28 @@ import useMessagesList from '@/hooks/services/useMessagesList'
 import ChatGroup from './ChatGroup/ChatGroup'
 import { BlockLoader } from '@/ui'
 
-// FIXME: This value needs to taken from API
-const DUMMY_DATE = 'Nov 24th, 2021';
-
 function ChatGroupList({ organizationId, channelId }) {
+  if (!channelId) return <BlockLoader loading />
   const {
     response: messagesListResponse,
     error: messagesListError,
     loading: messagesListLoading,
   } = useMessagesList(organizationId, channelId)
 
-  if (messagesListLoading) return <BlockLoader loading/>
+  if (messagesListLoading) return <BlockLoader loading />
   if (messagesListError) return messagesListError.message
+
+  const getLegendDate = (group) => {
+    if (group.messages && group.messages[0] && group.messages[0].datetime) {
+      const date = new Date(group.messages[0].datetime * 1000)
+      return new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium' }).format(
+        date
+      )
+    }
+    return new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium' }).format(
+      new Date()
+    )
+  }
 
   return (
     <section className={styles.feeds}>
@@ -31,7 +41,8 @@ function ChatGroupList({ organizationId, channelId }) {
         return (
           <fieldset key={`group-${index}`}>
             <legend>
-              {DUMMY_DATE} <FontAwesomeIcon icon={faChevronDown} />
+              {getLegendDate(group)}
+              <FontAwesomeIcon icon={faChevronDown} />
             </legend>
             <ChatGroup messages={group.messages} />
           </fieldset>
