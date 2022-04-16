@@ -19,7 +19,7 @@ Create React Custom hook services from Postman collection.
 
 `npx @fe-chef/services -f` [Slack-Clone-Api.postman_collection.json](https://github.com/web-slate/slack-app-clone-api/blob/main/Slack-Clone-Api.postman_collection.json)
 
-## Aproach
+## Approach
 
 > Web First approach
 

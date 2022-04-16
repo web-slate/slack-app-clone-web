@@ -6,10 +6,11 @@ import MessageForm from './MessageForm'
 import useApplicationContext from '@/context/Application/useApplicationContext'
 
 function ChatWindow() {
-  const { organizationId, channelId, channelName } = useApplicationContext()
+  const { organizationId, channelId, channelName, channelData } =
+    useApplicationContext()
   return (
-    <section class={styles.content}>
-      <ChatHeader name={channelName} />
+    <section className={styles.content}>
+      <ChatHeader name={channelName} data={channelData} />
       <ChatGroupList organizationId={organizationId} channelId={channelId} />
       <MessageForm channelName={channelName} />
     </section>
