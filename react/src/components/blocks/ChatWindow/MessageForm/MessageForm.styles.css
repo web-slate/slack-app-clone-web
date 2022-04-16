@@ -44,12 +44,4 @@
     border-radius: 10px 10px 0px 0px;
   }
 
-  .footerToolBar {
-    position: absolute;
-    top: 99px;
-    right: 7%;
-  }
-
-  .footerToolBar button{
-    border:0
-  }
+ 

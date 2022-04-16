@@ -33,3 +33,7 @@
   height: 1.2rem;
   margin-top: 0.3rem;
 }
+
+.accordionTitleButtons div{
+  display: inline-block;
+}

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { faChevronDown,  faEdit, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown,  faEdit, faPlus, faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CreateChannel } from '@/blocks'
-import { Accordion, BlockLoader } from '@/ui'
-import {ContextMenu, MenuItem, ContextMenuTrigger} from "react-contextmenu";
+import { Accordion, BlockLoader, ContextMenu } from '@/ui'
+import {ContextMenuTrigger} from "react-contextmenu";
 
 
 import styles from './SidebarNav.styles.css'
@@ -21,8 +21,10 @@ const SidebarNav = (props) => {
   const [showModal, setShowModal] = useState(false)
 
   const handleModalClose = (bool) => setShowModal(bool)
-  const handleChannelAdd = () => setShowModal(true)
-
+  const handleChannelAdd = (e) => {
+    e.preventDefault()
+    setShowModal(true)
+  }
   const {
     response: channelListResponse,
     error: channelListError,
@@ -36,7 +38,6 @@ const SidebarNav = (props) => {
   function MouseOut(event){
     event.target.style.background = ""
   }
-
 
   const handleClick = (e, data) => {
     console.log(`Clicked on menu ${data.item}`);
@@ -54,11 +55,11 @@ const SidebarNav = (props) => {
       </section>
 
       <section className="">
-      <ContextMenuTrigger id="select_options">
+      <ContextMenuTrigger id="select_options" >
         <div className={`${styles.sidebarChannel} ${styles.sidebarNoselect}`}>
           <Accordion
             title={<span>{formatMessage({ id: 'channels' })} </span>}
-            titleButtons={<FontAwesomeIcon icon={faPlus} onClick={handleChannelAdd} />}>
+            titleButtons={<> <ContextMenuTrigger id="select_options" holdToDisplay={0}><FontAwesomeIcon icon={faEllipsisVertical} className={styles.ellipsisVertical}/> </ContextMenuTrigger> <FontAwesomeIcon icon={faPlus} onClick={handleChannelAdd} /> </>} >
             <ul className={styles.sidebarChannelList}>
               {!channelListLoading && !channelListError && channelListResponse && channelListResponse.map((channel, index) => {
                 return <li key={ index }>{channel.channel_name}</li>;}
@@ -69,18 +70,7 @@ const SidebarNav = (props) => {
         </div>
       </ContextMenuTrigger>
 
-      <ContextMenu className={styles.menu} id="select_options">
-          <MenuItem onClick={handleClick} data={{item: ""}}
-          className={`${styles.menuItem} ${styles.menuItemFirst}`}>
-              {formatMessage({ id: 'create_sidebar_section' })}
-          </MenuItem>
-          <MenuItem onClick={handleClick} data={{item: ""}} className={styles.menuItem}>
-                {formatMessage({ id: 'browse_channels' })}
-          </MenuItem>
-          <MenuItem onClick={handleChannelAdd} data={{item: "Create a Channel"}} className={styles.menuItem}>
-              {formatMessage({ id: 'create_a_channel' })}
-          </MenuItem>
-        </ContextMenu>
+      <ContextMenu id="select_options" clickChannelAdd={handleChannelAdd} /> 
       </section>
 
       <BlockLoader loading={channelListLoading}/>
