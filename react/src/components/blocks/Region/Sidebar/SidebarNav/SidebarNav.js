@@ -48,6 +48,11 @@ const SidebarNav = (props) => {
     )
   }
 
+  const handleClick = (e, data) => {
+    console.log(`Clicked on menu ${data.item}`);
+  };
+    
+
   return (
     <article className={styles.sidebarOne}>
       <section className={styles.sidebarUser} onMouseOver={MouseOver} onMouseOut={MouseOut}>
