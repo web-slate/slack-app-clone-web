@@ -39,15 +39,6 @@ const SidebarNav = (props) => {
     event.target.style.background = ""
   }
 
-  const AccordinTitleButtons = () => {
-    return (
-      // <>
-      <span><FontAwesomeIcon icon={faEllipsisVertical} /></span>
-      // <span><FontAwesomeIcon icon={faPlus} onClick={handleChannelAdd} /></span>
-      // </>
-    )
-  }
-
   const handleClick = (e, data) => {
     console.log(`Clicked on menu ${data.item}`);
   };
