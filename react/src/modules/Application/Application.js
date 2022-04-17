@@ -59,11 +59,12 @@ const Application = () => {
     setChannel,
   }
 
+ 
   return (
     organizationName && (
       <ApplicationContext.Provider value={applicationContext}>
         <div className={styles.container}>
-          <TopBar />
+          <TopBar orgName={organizationName} />
           <main className={styles.contentArea}>
             <Sidebar />
             <section className={styles.body}>
