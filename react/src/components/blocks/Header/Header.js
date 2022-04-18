@@ -8,8 +8,9 @@ import styles from './Header.styles.css'
 
 import userImg from '../../../static/images/user.png'
 
-function Header() {
-  
+function Header(props) {
+  const { orgName, ...rest } = props
+
   return (
     <>
        <header className={styles.header}>
@@ -17,7 +18,7 @@ function Header() {
           <div className={styles.navIcons}>
             <a href="#"  className={styles.navIconsLink}><FontAwesomeIcon icon={faClock} /></a>
           </div>
-          <SearchForm />
+          <SearchForm orgName={orgName} />
           <div className={styles.navMoveLeft}>
             <a href="#" className={styles.navIconsWhite}><FontAwesomeIcon icon={faCircleQuestion} /> </a>
             <div className={styles.navUserImgWrapper} id="user">

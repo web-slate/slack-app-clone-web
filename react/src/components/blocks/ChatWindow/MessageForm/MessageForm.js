@@ -14,12 +14,11 @@ function MessageForm(props) {
   );
   const { channelName } = props   
   const { formatMessage } = useI18n()
-
   return (
     <>
       <div className={styles.feedForm}>
       <Editor
-          placeholder={formatMessage({ id: 'send_a_message_to_#' })} 
+          placeholder={`${formatMessage({ id: 'send_a_message_to' })} ${channelName}`}
           editorStyle={{ backgroundColor: "#fff" }} 
           editorState={editorState}
           onEditorStateChange={setEditorState}
