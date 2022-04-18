@@ -12,6 +12,8 @@ import useMessagesList from '@/hooks/services/useMessagesList'
 import ChatGroup from './ChatGroup/ChatGroup'
 import { BlockLoader } from '@/ui'
 
+import { formatDate } from '@/utils/date'
+
 function ChatGroupList({ organizationId, channelId }) {
   if (!channelId) return <BlockLoader loading />
   const {
@@ -24,15 +26,11 @@ function ChatGroupList({ organizationId, channelId }) {
   if (messagesListError) return messagesListError.message
 
   const getLegendDate = (group) => {
+    let date = new Date()
     if (group.messages && group.messages[0] && group.messages[0].datetime) {
-      const date = new Date(group.messages[0].datetime * 1000)
-      return new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium' }).format(
-        date
-      )
+      date = new Date(group.messages[0].datetime * 1000)
     }
-    return new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium' }).format(
-      new Date()
-    )
+    return formatDate(date)
   }
 
   return (

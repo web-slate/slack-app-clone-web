@@ -25,20 +25,30 @@ const SidebarNav = (props) => {
 
   const [showModal, setShowModal] = useState(false)
   const [channelListShow, setchannelListShow] = useState(true)
+  const [channelList, setchannelList] = useState([])
 
-  const handleModalClose = (bool) => setShowModal(bool)
-  const handleChannelAdd = (e) => {
-    e.preventDefault()
-    setShowModal(true)
-  }
   const {
     response: channelListResponse,
     error: channelListError,
     loading: channelListLoading,
+    refresh: channelListRefresh,
   } = useChannelList()
 
-  const handleClick = (e, data) => {
-    console.log(`Clicked on menu ${data.item}`)
+  const refreshChannels = async () => {
+    const { response } = await channelListRefresh()
+    if (response && response.length) {
+      setchannelList(response)
+    }
+  }
+
+  const handleModalClose = async (bool, channelAdded) => {
+    setShowModal(bool)
+    if (channelAdded) await refreshChannels()
+  }
+
+  const handleChannelAdd = (e) => {
+    e.preventDefault()
+    setShowModal(true)
   }
 
   const handleChannelClick = (e, channel) => {
@@ -47,6 +57,13 @@ const SidebarNav = (props) => {
 
   if (!channelId && channelListResponse && channelListResponse[0]) {
     setChannel(channelListResponse[0])
+  }
+  if (
+    channelList.length === 0 &&
+    channelListResponse &&
+    channelListResponse[0]
+  ) {
+    setchannelList(channelListResponse)
   }
 
   return (
@@ -83,8 +100,8 @@ const SidebarNav = (props) => {
               <ul className={styles.sidebarChannelList}>
                 {!channelListLoading &&
                   !channelListError &&
-                  channelListResponse &&
-                  channelListResponse.map((channel, index) => {
+                  channelList &&
+                  channelList.map((channel, index) => {
                     return (
                       <li
                         onClick={(e) => handleChannelClick(e, channel)}

@@ -25,7 +25,7 @@ function CreateChannel({ show, handleModalClose }) {
     const result = await createChannelPostedData(data)
     if (result.response) {
       alert(result.response?.message)
-      handleModalClose(false)
+      handleModalClose(false, true)
     } else if (result.error) {
       alert(result.error?.response?.data?.message)
     }
