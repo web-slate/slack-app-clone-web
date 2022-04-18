@@ -15,11 +15,12 @@ function ContextMenu(props) {
     
   return (
     <>
-      <ReactContextMenu className={styles.menu} id={id}>
+      <ReactContextMenu className={ id == 'select_options'?styles.menu:styles.channelMenu} id={id}>
+        {id == 'select_options' &&
           <MenuItem onClick={handleClick} data={{"item":""}}
           className={`${styles.menuItem} ${styles.menuItemFirst}`}>
               {formatMessage({ id: 'create_sidebar_section' })}
-          </MenuItem>
+          </MenuItem> }
           <MenuItem onClick={handleClick} data={{"item":""}} className={styles.menuItem}>
                 {formatMessage({ id: 'browse_channels' })}
           </MenuItem>

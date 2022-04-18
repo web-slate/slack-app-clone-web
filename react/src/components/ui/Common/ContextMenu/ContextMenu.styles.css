@@ -7,6 +7,14 @@
   border-radius: 10px;
 }
 
+.channelMenu{
+  background-color: white;
+  height: 5rem;
+  z-index: 2;
+  width: 19rem;
+  border-radius: 10px;
+}
+
 .menu::-webkit-scrollbar {
   width: 10px;
 }
