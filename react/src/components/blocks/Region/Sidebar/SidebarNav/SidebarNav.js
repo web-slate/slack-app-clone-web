@@ -91,7 +91,9 @@ const SidebarNav = (props) => {
                       className={styles.ellipsisVertical}
                     />
                   </ContextMenuTrigger>
-                  <FontAwesomeIcon icon={faPlus} onClick={handleChannelAdd} />
+                  <ContextMenuTrigger id="select_channel" holdToDisplay={0}>
+                    <FontAwesomeIcon icon={faPlus} />
+                  </ContextMenuTrigger>
                 </>
               }
               active={channelListShow}
@@ -118,6 +120,10 @@ const SidebarNav = (props) => {
                       </li>
                     )
                   })}
+                  {!channelListLoading && !channelListError && channelList &&
+                  <li onClick={handleChannelAdd}>
+                      {formatMessage({ id: 'create_a_channel' })}
+                  </li>}
               </ul>
             </Accordion>
             <CreateChannel
@@ -127,6 +133,7 @@ const SidebarNav = (props) => {
           </div>
         </ContextMenuTrigger>
         <ContextMenu id="select_options" clickChannelAdd={handleChannelAdd} />
+        <ContextMenu id="select_channel" clickChannelAdd={handleChannelAdd} />
       </section>
 
       <BlockLoader loading={channelListLoading} />
