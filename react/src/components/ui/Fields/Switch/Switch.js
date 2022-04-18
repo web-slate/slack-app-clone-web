@@ -17,6 +17,6 @@ const Switch = forwardRef((props, ref) => {
       </div>
     </>
   )
-});
+})
 
 export default Switch

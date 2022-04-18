@@ -59,7 +59,6 @@ const Application = () => {
     setChannel,
   }
 
- 
   return (
     organizationName && (
       <ApplicationContext.Provider value={applicationContext}>

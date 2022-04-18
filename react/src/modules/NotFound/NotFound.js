@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { RoutePaths } from '@/utils'
 
 const NotFound = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
     <section>

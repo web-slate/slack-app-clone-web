@@ -1,5 +1,5 @@
 html {
- line-height: 1;
+  line-height: 1;
   position: relative;
   height: 100%;
   font-size: 1rem;
@@ -25,134 +25,132 @@ html {
 }
 
 body {
-    margin: 0;
-    font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    height: 100%;
-    width: 100%;
-    text-align: justify;
-    overflow: hidden;
-  }
+  margin: 0;
+  font-family: Lato, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+  text-align: justify;
+  overflow: hidden;
+}
 
+blockquote {
+  quotes: none;
+}
+blockquote:before {
+  content: '';
+  content: none;
+}
+blockquote:after {
+  content: '';
+  content: none;
+}
 
-  blockquote {
-    quotes: none;
-  }
-  blockquote:before {
-    content: "";
-    content: none;
-  }
-  blockquote:after {
-    content: "";
-    content: none;
-  }
-  
-  a img {
-    border: none;
-  }
-  
-  q {
-    quotes: none;
-  }
-  q:before {
-    content: "";
-    content: none;
-  }
-  q:after {
-    content: "";
-    content: none;
-  }
-  
-  ol {
-    list-style: none;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  
-  article {
-    display: block;
-  }
-  
-  aside {
-    display: block;
-  }
-  
-  details {
-    display: block;
-  }
-  
-  figure {
-    display: block;
-  }
-  
-  figcaption {
-    display: block;
-  }
-  
-  footer {
-    display: block;
-  }
-  
-  header {
-    display: block;
-  }
-  
-  hgroup {
-    display: block;
-  }
-  
-  menu {
-    display: block;
-  }
-  
-  nav {
-    display: block;
-  }
-  
-  section {
-    display: block;
-  }
-  
-  summary {
-    display: block;
-  }
-  
-  main {
-    display: block;
-  }
+a img {
+  border: none;
+}
 
-  
+q {
+  quotes: none;
+}
+q:before {
+  content: '';
+  content: none;
+}
+q:after {
+  content: '';
+  content: none;
+}
+
+ol {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+article {
+  display: block;
+}
+
+aside {
+  display: block;
+}
+
+details {
+  display: block;
+}
+
+figure {
+  display: block;
+}
+
+figcaption {
+  display: block;
+}
+
+footer {
+  display: block;
+}
+
+header {
+  display: block;
+}
+
+hgroup {
+  display: block;
+}
+
+menu {
+  display: block;
+}
+
+nav {
+  display: block;
+}
+
+section {
+  display: block;
+}
+
+summary {
+  display: block;
+}
+
+main {
+  display: block;
+}
+
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    outline: none;
-  }
-  
-  body::-webkit-scrollbar {
-    width: 0.125rem !important;
-  }
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-  body::-webkit-scrollbar-thumb {
-    background-color: darkgray;
-    outline: 1px solid slategray;
-  }
-  .fa-rotate-315 {
-    -webkit-transform: rotate(315deg);
-    -moz-transform: rotate(315deg);
-    -ms-transform: rotate(315deg);
-    -o-transform: rotate(315deg);
-    transform: rotate(315deg);
-  }
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0.125rem !important;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  outline: 1px solid slategray;
+}
+.fa-rotate-315 {
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
