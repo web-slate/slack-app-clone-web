@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './ChannelMembers.styles.css'
 import userImg from '../../../../../static/images/user.png'
 import userIconImg from '../../../../../static/images/usericon.png'
+import userIconEven from '../../../../../static/images/usericon-even.png'
 
 function ChannelMembers({ members = [] }) {
   return (
@@ -14,7 +15,7 @@ function ChannelMembers({ members = [] }) {
             return (
               <img
                 key={index}
-                src={userIconImg}
+                src={index % 0 ? userIconEven : userIconImg}
                 alt={member.username}
                 title={member.username}
                 width="100%"
