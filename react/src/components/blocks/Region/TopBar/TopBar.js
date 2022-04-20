@@ -6,9 +6,7 @@ import Header from '../../Header'
 
 const TopBar = (props) => {
   const { className, ...rest } = props
-  return (
-    <Header {...rest } />  
-  )
+  return <Header {...rest} />
 }
 
 TopBar.propTypes = {

@@ -1,4 +1,4 @@
-.contentChannelName{
+.contentChannelName {
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -6,11 +6,11 @@
   margin-left: 1.5rem;
 }
 
-.contentHeaderName a{
+.contentHeaderName a {
   text-decoration: none;
-  color:#3F0E40;
+  color: #3f0e40;
 }
 
-.contentHeaderName svg{
+.contentHeaderName svg {
   height: 0.6rem;
 }

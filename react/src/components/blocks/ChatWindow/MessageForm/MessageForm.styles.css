@@ -1,47 +1,44 @@
+/* TODO: Component CSS Style goes here */
 
-  /* TODO: Component CSS Style goes here */
-
-  .feedForm {
-    grid-area: footer;
-    height: 10%;
-    position: relative;
-    /* display: flex;
+.feedForm {
+  grid-area: footer;
+  height: 10%;
+  position: relative;
+  /* display: flex;
     justify-content: center;
     align-items: center; */
-    margin-top: -2rem;
-  }
+  margin-top: -2rem;
+}
 
-  .appHeader {
-    width: 90%;
-    height: 40%;
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
-    padding: 0.6rem;
-    border-top-left-radius: 0.3125rem;
-    border-top-right-radius: 0.3125rem;
-    outline: none;
-    border-top: 0.0625rem solid var(--slack-input-border-color);
-    border-left: 0.0625rem solid var(--slack-input-border-color);
-    border-right: 0.0625rem solid var(--slack-input-border-color);
-    border-bottom: none;
-    overflow: auto;
-  }
+.appHeader {
+  width: 90%;
+  height: 40%;
+  margin-top: 2%;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 0.6rem;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
+  outline: none;
+  border-top: 0.0625rem solid var(--slack-input-border-color);
+  border-left: 0.0625rem solid var(--slack-input-border-color);
+  border-right: 0.0625rem solid var(--slack-input-border-color);
+  border-bottom: none;
+  overflow: auto;
+}
 
-  .WrapperClass {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin: 0.2rem 0.88rem;
-  }
+.WrapperClass {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 0.2rem 0.88rem;
+}
 
-  .EditorClass {
-    padding: 1rem;
-    border-radius: 0px 0px 10px 10px;
-  }
+.EditorClass {
+  padding: 1rem;
+  border-radius: 0px 0px 10px 10px;
+}
 
-  .ToolbarClass{
-    background-color: rgba(var(--sk_foreground_min_solid,248,248,248),1);
-    border-radius: 10px 10px 0px 0px;
-  }
-
- 
+.ToolbarClass {
+  background-color: rgba(var(--sk_foreground_min_solid, 248, 248, 248), 1);
+  border-radius: 10px 10px 0px 0px;
+}

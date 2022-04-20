@@ -5,10 +5,14 @@ import styles from './PageLoader.styles.css'
 import { Spinner } from '@/ui'
 
 export default function PageLoader({ loading }) {
-  return loading ? createPortal (
-    <>
-      <div className={styles.pageLoader}><Spinner /></div>
-    </>,
-    document.body
-  ) : null
+  return loading
+    ? createPortal(
+        <>
+          <div className={styles.pageLoader}>
+            <Spinner />
+          </div>
+        </>,
+        document.body
+      )
+    : null
 }

@@ -1,5 +1,4 @@
-
-  /* TODO: Component CSS Style goes here */
+/* TODO: Component CSS Style goes here */
 .content {
   grid-column: 1 / -1;
   height: 100vh;
@@ -8,8 +7,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 3rem 1fr 10rem;
   grid-template-areas:
-      "header"
-      "bookmark"
-      "main"
-      "footer";
+    'header'
+    'bookmark'
+    'main'
+    'footer';
 }
