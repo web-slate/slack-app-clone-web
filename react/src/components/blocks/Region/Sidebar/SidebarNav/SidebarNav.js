@@ -120,8 +120,8 @@ const SidebarNav = (props) => {
                       </li>
                     )
                   })}
-                  {!channelListLoading && !channelListError && channelList &&
-                  <li onClick={handleChannelAdd}>
+                  {!channelListLoading && !channelListError && channelListShow && channelList &&
+                  <li onClick={handleChannelAdd} >
                       {formatMessage({ id: 'create_a_channel' })}
                   </li>}
               </ul>
