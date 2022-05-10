@@ -1,0 +1,50 @@
+.header {
+  grid-row: 1 / 2;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  background: #350d36;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+}
+.navIcons {
+  display: flex;
+  align-items: center;
+  margin-left: 13rem;
+}
+
+.navIconsLink {
+  margin-right: 2rem;
+  font-size: 1.25rem;
+  color: var(--slack-main-white);
+}
+
+.navIconsGrey {
+  color: var(--dark-grey);
+}
+
+.navIconsWhite {
+  color: var(--slack-main-white);
+}
+
+.navMoveLeft {
+  margin-left: auto;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.navMoveLeftIcon {
+  font-size: 1.125rem;
+  color: var(--slack-main-white);
+}
+
+.navUserImgWrapper {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.8rem;
+}

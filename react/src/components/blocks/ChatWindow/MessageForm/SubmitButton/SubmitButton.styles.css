@@ -1,0 +1,24 @@
+.footerToolBar {
+  position: absolute;
+  width: 96.7%;
+  display: flex;
+  align-items: center;
+  top: 77px;
+  margin: 0.9rem 0.96rem;
+  background-color: rgba(var(--sk_foreground_min_solid, 248, 248, 248), 1);
+  border-radius: 10px 10px 10px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.footerToolbarImg {
+  width: 2%;
+  height: 2%;
+  margin: 0.8rem;
+}
+
+.sendImg {
+  width: 2%;
+  height: 2%;
+  margin-left: auto;
+  margin-right: 2.3rem;
+}

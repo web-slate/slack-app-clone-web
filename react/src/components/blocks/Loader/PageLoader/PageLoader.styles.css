@@ -1,0 +1,9 @@
+.pageLoader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+  background-color: transparent;
+  top: 0;
+  background-color: rgba(0, 0, 0, 50%);
+}

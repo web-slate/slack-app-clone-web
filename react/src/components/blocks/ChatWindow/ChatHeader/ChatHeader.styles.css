@@ -1,0 +1,26 @@
+.contentHeader {
+  grid-area: header;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 0.1rem solid var(--slack-white);
+}
+
+.contentBookmark {
+  grid-area: bookmark;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 0.1rem solid var(--slack-white);
+}
+
+.contentHeaderDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contentHeaderName {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+}

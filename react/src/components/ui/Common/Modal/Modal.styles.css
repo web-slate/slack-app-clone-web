@@ -1,0 +1,46 @@
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+.modalContent {
+  max-width: 520px;
+  width: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.modalHeader,
+.modalBody {
+  padding: 15px 20px;
+  background-color: #fefefe;
+}
+
+.modalBody {
+  background-color: #fff;
+  padding-bottom: 30px;
+  padding-top: 1px;
+}
+.modalHeader h2 {
+  margin: 0;
+  display: inline-block;
+}
+
+.modalHeader span {
+  float: right;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.modalHeader span:hover {
+  background-color: #f6f6f6;
+}

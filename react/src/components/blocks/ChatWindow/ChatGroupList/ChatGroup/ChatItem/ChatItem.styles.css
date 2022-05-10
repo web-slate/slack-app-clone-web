@@ -1,0 +1,34 @@
+.feedArticle {
+  display: flex;
+  padding-left: 1.5rem;
+}
+.feedUserAvatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  position: relative;
+  margin-top: 1.3rem;
+}
+
+.feedUserInfo h4 {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.feedUserInfoTS {
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 0.3rem;
+}
+
+.feedText {
+  margin-top: -10%;
+}
+
+.feedUserAvatar img {
+  width: 100%;
+  height: 100%;
+}

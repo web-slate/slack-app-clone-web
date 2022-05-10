@@ -1,0 +1,38 @@
+.menu {
+  background-color: white;
+  height: 8rem;
+  z-index: 2;
+  width: 19rem;
+  border-radius: 10px;
+}
+
+.channelMenu{
+  background-color: white;
+  height: 5rem;
+  z-index: 2;
+  width: 19rem;
+  border-radius: 10px;
+}
+
+.menu::-webkit-scrollbar {
+  width: 10px;
+}
+
+.menu::-webkit-scrollbar-track {
+  background-color: gainsboro;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 200px;
+}
+
+.menuItem {
+  padding: 0.4rem 0.9rem;
+  margin: 0.3rem 0rem;
+  border: none;
+}
+
+.menuItemFirst {
+  border-bottom: 1px solid var(--slack-white);
+}

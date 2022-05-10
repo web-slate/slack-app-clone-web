@@ -1,0 +1,12 @@
+.sidebarMain {
+  border-top: 0.1rem solid var(--slack-border-color);
+  grid-column: 1 / 2;
+  height: 100vh;
+  background-color: var(--slack-other-bckground);
+  display: grid;
+  grid-template-columns: 4rem minmax(6.25rem, 16.25rem);
+}
+.sidebarOne {
+  grid-column: 1 / -1;
+  overflow: auto;
+}

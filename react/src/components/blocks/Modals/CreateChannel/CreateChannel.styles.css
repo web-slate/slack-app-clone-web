@@ -1,0 +1,50 @@
+.heading {
+  color: #616061;
+}
+
+.textField {
+  font-size: 1.125rem;
+  line-height: 1.33334;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.46668;
+  color: #1d1c1d;
+}
+
+.formContainer {
+  margin-bottom: 1rem;
+}
+
+.subLabel {
+  padding-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.38463;
+  font-weight: 400;
+  color: #1d1c1db3;
+}
+
+.formBlock {
+  min-width: 25rem;
+  width: 100%;
+  display: grid;
+}
+
+.createModalPrivateLeft {
+  float: left;
+  width: 80%;
+}
+
+.createModalRight {
+  float: right;
+}
+
+.error {
+  color: red;
+}

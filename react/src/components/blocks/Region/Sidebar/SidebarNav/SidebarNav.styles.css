@@ -1,0 +1,112 @@
+.sidebarOne {
+  grid-column: 1 / -1;
+  overflow: auto;
+}
+
+.sidebarOne section:not(:last-of-type) {
+  border-bottom: 0.1rem solid var(--slack-border-color);
+}
+
+.sidebarUser {
+  color: var(--slack-main-white);
+  position: relative;
+}
+
+.sidebarUser:hover {
+  background-color: #350d36;
+}
+
+.sidebarUserInfo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sidebarUserInfo h4 {
+  font-size: 1.2rem;
+  margin-right: 0.8rem;
+  margin-left: 0.8rem;
+}
+
+.sidebarUserInfo svg {
+  height: 0.6rem;
+}
+
+.sidebarUserInfoAdditional {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: var(--slack-white);
+}
+
+.sidebarUserInfoAdditional svg {
+  color: var(--slack-green);
+  font-size: 0.5rem;
+  padding-right: 0.3rem;
+}
+
+.sidebarUserEditIcon {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0.1rem solid var(--slack-main-white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--slack-main-white);
+}
+
+.sidebarUserEditIcon svg {
+  color: var(--slack-other-bckground);
+}
+
+.sidebarChannel {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: var(--slack-white);
+  margin-top: 1rem;
+}
+.sidebarChannelList {
+  padding: 0;
+  width: 100%;
+  margin-left: 1.5rem;
+}
+.sidebarChannelList li {
+  padding: 0.3rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.sidebarChannelList li:hover {
+  background-color: #ffffff33;
+}
+
+.sidebarChannelList li:before {
+  content: '#';
+  margin-right: 0.6rem;
+  margin-left: 0.3rem;
+}
+
+.sidebarNoselect {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.ellipsisVertical {
+  margin-right: 1.2rem;
+}
+.sidebarChannelListHide {
+  display: none;
+}
+.sidebarChannelListActive {
+  background-color: #1264a3;
+}

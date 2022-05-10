@@ -1,0 +1,39 @@
+/* Style the accordion section */
+.accordionIcon {
+  width: 10px;
+  margin-left: 1rem;
+  height: 1.3rem;
+}
+
+.accordionContentActive {
+  display: block;
+  margin-top: 0.8rem;
+}
+
+.accordionContentHide {
+  display: none;
+}
+
+.accordionTitle {
+  float: left;
+  display: contents;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.accordionTitle span {
+  font-size: 1.2rem;
+  padding-left: 0.8rem;
+}
+
+.accordionTitleButtons {
+  float: right;
+  margin-right: 2rem;
+  height: 1.2rem;
+  margin-top: 0.3rem;
+}
+
+.accordionTitleButtons div {
+  display: inline-block;
+}
